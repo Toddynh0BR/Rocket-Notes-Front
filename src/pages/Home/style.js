@@ -33,6 +33,13 @@ h3 {
  padding-bottom: 2rem;
 }
 
+h4 {
+ font-family: 'Roboto Slab', sans-serif;
+ font-weight: 400;
+ font-size: 1.6rem;
+ color: #999591;
+}
+
 .notes {
  width: 100%;
  margin-top: 2rem;

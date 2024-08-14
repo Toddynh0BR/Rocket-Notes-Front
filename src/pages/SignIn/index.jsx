@@ -1,5 +1,8 @@
 import { Container, Main } from "./style";
+
+import { useAuth } from "../../hooks/auth";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import { HiOutlineMail } from "react-icons/hi";
 import SignBG from "../../assets/SignBG.png";
@@ -9,6 +12,22 @@ import { Button } from "../../components/button";
 import { Input } from "../../components/input";
 
 export function SignIn(){
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+ 
+  const [Loading, setLoading] = useState(false)
+ 
+  const { signIn } = useAuth();
+  
+  function HandleSignIn(event){
+     event.preventDefault() 
+     setLoading(true)
+     
+     signIn({email, password})
+     .then(setLoading(false));
+
+  }
+
    return(
     <Container>
       <Main>
@@ -20,16 +39,19 @@ export function SignIn(){
          <Input
          icon={HiOutlineMail}
          placeholder="E-mail"
+         onChange={e => setEmail(e.target.value)}
          ></Input>
 
          <Input
          icon={FiLock}
          placeholder="Senha"
+         onChange={e => setPassword(e.target.value)}
          ></Input>
 
          <Button
          title="Entrar"
-         onclick={(e)=> {event.preventDefault()}}
+         loading={Loading}
+         onclick={HandleSignIn}
          ></Button>
 
          <Link to="/signup">
