@@ -95,4 +95,24 @@ a:hover::after {
  gap: .5rem;
 }
 
+@media (max-width: 430px){
+ width: 100%;
+ padding: 4rem;
+
+ span, h2 {
+  display: none;
+ }
+
+ .MobalTitle {
+ span, h2 {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-self: center;
+ }
+
+ justify-content: space-between;
+ display: flex;
+ }
+}
 `

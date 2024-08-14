@@ -5,6 +5,7 @@ import { api } from "../../services/api";
 import { Link } from "react-router-dom";
 
 import { Header } from "../../components/header";
+import { Button } from "../../components/button";
 import { Input } from "../../components/input";
 import { Tag } from "../../components/tag"
 
@@ -113,11 +114,19 @@ export function Home(){
            </Header>
 
            <Main>
+
             <Input
              placeholder="Pesquisar pelo título"
              onKeyDown={handleIndex}
              onChange={HandleReset}
             ></Input>
+
+            <div className="MobalTitle">
+            <h3>Minhas notas</h3>
+            <Link to="/create">
+            <span>Criar nota</span>
+            </Link>
+            </div>
 
             <h3>Minhas notas</h3>
 

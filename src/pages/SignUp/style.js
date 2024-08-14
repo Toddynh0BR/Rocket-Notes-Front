@@ -9,6 +9,13 @@ export const Container = styled.div`
  img {
  max-height: 100vh;
  }
+
+ @media (max-width: 430px){
+ justify-content: center;
+  img {
+   display: none;
+  }
+ }
 `
 
 export const Main = styled.div`
@@ -65,5 +72,10 @@ form {
  cursor: pointer;
  opacity: 50%;
  }
+}
+
+@media (max-width: 430px){
+ width: 100%;
+
 }
 `

@@ -14,6 +14,11 @@ export const Container = styled.div`
   grid-area: header1;
   padding-left: 6rem;
  }
+
+ @media (max-width: 430px){
+   display: flex;
+   flex-direction: column;
+ }
 `
 
 export const Main = styled.div`
@@ -74,10 +79,68 @@ h4 {
  }
 }
 
-
 .note:hover {
   opacity: 50%;
   cursor: pointer;
+ }
+
+ .MobalTitle {
+  display: none;
+ }
+
+ @media (max-width: 430px){
+ padding: 4rem 4rem;
+
+ h3 {
+ display: none;
+ }
+
+ .MobalTitle {
+   justify-content: space-between;
+   align-items: center;
+   display: flex;
+
+   width: 100%;   
+
+   border-bottom: 1px solid #3E3B47;
+   padding-bottom: 1rem;
+
+   margin-top: 5rem;
+   h3 {
+    display: flex;
+    border: none;
+    padding: 0;
+    margin: 0;
+   }
+
+   span {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #FF9000;
+    
+    white-space: nowrap;
+   }
+
+   span::after {
+    content: ' ';
+    width: 0%;
+    height: .1rem;
+    background-color: #FF9000;
+    transition: .3s ease-in-out;
+
+    display: flex;
+   }
+
+   span:hover::after {
+    width: 100%;
+   }
+
+   span:hover {
+    cursor: pointer;
+    opacity: 50%;
+   }
+ }
  }
 `
 
@@ -164,4 +227,7 @@ li:hover {
  }
 }
 
+@media (max-width: 430px){
+   display: none;
+ }
 `

@@ -55,6 +55,11 @@ export function Preview(){
             <span onClick={DeleteNote}>Excluir a nota</span>
             <h2>{note.note.title}</h2>
 
+            <div className="MobalTitle">
+            < h2>{note.note.title}</h2>
+             <span onClick={DeleteNote}>Excluir a nota</span>
+            </div>
+
             <p>
             {note.note.description}
             </p>

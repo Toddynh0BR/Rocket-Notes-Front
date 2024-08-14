@@ -241,4 +241,9 @@ h3 {
  }
  }
 }
+
+@media (max-width: 430px){
+ width: 100%;
+ padding: 4rem;
+}
 `
