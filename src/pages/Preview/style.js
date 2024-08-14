@@ -95,6 +95,10 @@ a:hover::after {
  gap: .5rem;
 }
 
+.MobalTitle {
+ display: none;
+}
+
 @media (max-width: 430px){
  width: 100%;
  padding: 4rem;
