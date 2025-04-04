@@ -100,8 +100,8 @@ form {
 
 @media (max-width: 430px){
  width: 100%;
-
  position: relative;
+
 
  &[data-position="signIn"] {
  transform: translateX(0%);
