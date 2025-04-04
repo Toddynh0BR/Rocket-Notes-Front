@@ -1,5 +1,5 @@
 import { Container, Main } from "./style";
-
+import { FaNoteSticky } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import { useState } from "react";
